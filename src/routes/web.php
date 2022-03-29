@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('api', function(){
-    return "apis";
-});
+Route::get('ticket', 'App\Http\Controllers\TicketController@show');
+
+
+Route::get('ticket/{id}', 'App\Http\Controllers\TicketController@showOne');
+
+Route::get('detticket', 'App\Http\Controllers\DetTicketController@show');
+
+
+Route::get('detticket/{id}', 'App\Http\Controllers\DetTicketController@showOne');
+

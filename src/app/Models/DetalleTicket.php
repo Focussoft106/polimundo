@@ -15,5 +15,8 @@ class DetalleTicket extends Model
 
     protected $hidden = ['id'];
 
-
+    public function ticket()
+    {
+        return $this->hasOne('App\Models\DetalleTicket');
+    }
 }

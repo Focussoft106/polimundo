@@ -15,5 +15,8 @@ class Tickets extends Model
 
     protected $hidden = ['id'];
 
-
+    public function detalleticket()
+    {
+        return $this->belongsTo('App\Models\DetalleTicket', 'ticket_id');
+    }
 }
